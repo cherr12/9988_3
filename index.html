@@ -238,7 +238,7 @@
         <!-- 카드 6 -->
          <div class="col-md-4">
             <div class="card">
-                <img class="card-img-top" src="https://t4.ftcdn.net/jpg/02/22/93/47/240_F_222934740_eT5RkqJxB2exOC4LU25vUxJePO2ChVPB.jpg">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iv3CWiFe97qrsPcyU9qMjKOtfcOK1brQ7w&usqp=CAU">
                 <div class="card-body">
                     <h4 class="card-title">여름밤 9988 하는 날 이벤트</h4>
                     <h6 class="card-subtitle mb-2 text-muted">참여기간: 2023.09.17(일)</h6>
@@ -271,13 +271,28 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function(){
-      $("#searchInput").on("keyup", function() {
+    $("#searchInput").on("keyup", function() {
         var value = $(this).val().toLowerCase();
-        $(".card").filter(function() {
-          $(this).toggle($(this).find('.card-title').text().toLowerCase().indexOf(value) > -1)
+        $(".card").each(function() {
+        var match = $(this).find('.card-title').text().toLowerCase().indexOf(value) > -1;
+        $(this).toggle(match);
+        if (!match) {
+            $(this).find('.collapse').collapse('hide');
+        }
         });
-      });
+    });
+    $('.collapse').collapse();
     });
     </script>
+
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit = "DAN-EJN9OPvQ1grucWRr"
+data-ad-width = "320"
+data-ad-height = "100"></ins>
+<script type="text/javascript" src="https://t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7176398630749148"
+     crossorigin="anonymous"></script>
+
     </body>
 </html> 
